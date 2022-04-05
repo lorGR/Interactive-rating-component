@@ -1,0 +1,112 @@
+:root{
+    --bg--site: hsl(216, 12%, 8%);
+    --bg--card: hsl(213, 19%, 18%);
+
+    --circle--color: hsl(210, 14%, 22%);
+    --circle--color--hover: hsl(217, 12%, 63%);
+    
+    --subtext--color: hsl(217, 12%, 63%);
+    --subtext--size: 15px;
+
+    --primary--color: hsl(25, 97%, 53%);
+
+}
+
+*{
+    box-sizing: border-box;
+    font-family: 'Overpass', sans-serif;
+    overflow: hidden;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--bg--site);
+    display: grid;
+    place-items: center;
+    .card{
+        width: 90%;
+        padding: 1.25em;
+        border-radius: 1em;
+        background: var(--bg--card);
+        &__icon{
+            display: inline-block;
+            padding: .75em;
+            border-radius: 50%;
+            background: var(--circle--color);
+            &__holder{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        &__title{
+            color: white;
+            h2{
+                margin: .65em 0 .3em 0;
+            }
+        }
+        &__subtitle{
+            color: var(--subtext--color);
+            p{
+                font-size: var(--subtext--size);
+                line-height: 1.5;
+            }
+        }
+        &__rating{
+            color: var(--subtext--color);
+            form{
+                display: flex;
+                flex-direction: column;
+            }
+            button{
+                text-align: center;
+                color: white;
+                padding: 1em 0;
+                margin-top: 1.5em;
+                border: none;
+                border-radius: 50px;
+                background: var(--primary--color);
+                transition: background .5s ease;
+                letter-spacing: 2px;
+                font-weight: 700;
+                cursor: pointer;
+            }
+            button:hover{
+                color: var(--primary--color);
+                background: white;
+            }
+            &__buttons{
+                display: flex;
+                justify-content: space-between;
+                &__input{
+                    display: none;
+                }
+                &__label{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50%;
+                    width: 2.5em;
+                    height: 2.5em;
+                    background: var(--circle--color);
+                    cursor: pointer;
+                    transition: background .25s ease;
+                }
+                .card__rating__buttons__input:hover + .card__rating__buttons__label{
+                    color: white;
+                    background: var(--circle--color--hover)
+                }
+                .card__rating__buttons__input:checked + .card__rating__buttons__label{
+                    color: white;
+                    background: var(--primary--color);
+                }
+                
+            }
+        }
+    }
+}
+
+

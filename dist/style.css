@@ -1,0 +1,105 @@
+:root {
+  --bg--site: hsl(216, 12%, 8%);
+  --bg--card: hsl(213, 19%, 18%);
+  --circle--color: hsl(210, 14%, 22%);
+  --circle--color--hover: hsl(217, 12%, 63%);
+  --subtext--color: hsl(217, 12%, 63%);
+  --subtext--size: 15px;
+  --primary--color: hsl(25, 97%, 53%);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Overpass", sans-serif;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  background: var(--bg--site);
+  display: grid;
+  place-items: center;
+}
+body .card {
+  width: 90%;
+  padding: 1.25em;
+  border-radius: 1em;
+  background: var(--bg--card);
+}
+body .card__icon {
+  display: inline-block;
+  padding: 0.75em;
+  border-radius: 50%;
+  background: var(--circle--color);
+}
+body .card__icon__holder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .card__title {
+  color: white;
+}
+body .card__title h2 {
+  margin: 0.65em 0 0.3em 0;
+}
+body .card__subtitle {
+  color: var(--subtext--color);
+}
+body .card__subtitle p {
+  font-size: var(--subtext--size);
+  line-height: 1.5;
+}
+body .card__rating {
+  color: var(--subtext--color);
+}
+body .card__rating form {
+  display: flex;
+  flex-direction: column;
+}
+body .card__rating button {
+  text-align: center;
+  color: white;
+  padding: 1em 0;
+  margin-top: 1.5em;
+  border: none;
+  border-radius: 50px;
+  background: var(--primary--color);
+  transition: background 0.5s ease;
+  letter-spacing: 2px;
+  font-weight: 700;
+  cursor: pointer;
+}
+body .card__rating button:hover {
+  color: var(--primary--color);
+  background: white;
+}
+body .card__rating__buttons {
+  display: flex;
+  justify-content: space-between;
+}
+body .card__rating__buttons__input {
+  display: none;
+}
+body .card__rating__buttons__label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 2.5em;
+  height: 2.5em;
+  background: var(--circle--color);
+  cursor: pointer;
+  transition: background 0.25s ease;
+}
+body .card__rating__buttons .card__rating__buttons__input:hover + .card__rating__buttons__label {
+  color: white;
+  background: var(--circle--color--hover);
+}
+body .card__rating__buttons .card__rating__buttons__input:checked + .card__rating__buttons__label {
+  color: white;
+  background: var(--primary--color);
+}
