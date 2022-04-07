@@ -15,49 +15,63 @@
 
 <body>
 
-  <!-- Rating state start -->
   <div class="card">
-    <div class="card__icon">
-      <div class="card__icon__holder">
-        <img src="/images/icon-star.svg" alt="starIcon">
+    <!-- Rating state start -->
+    <div class="card__before">
+      <div class="card__icon">
+        <div class="card__icon__holder">
+          <img src="/images/icon-star.svg" alt="starIcon">
+        </div>
+      </div>
+      <div class="card__title">
+        <h2>How did we do?</h2>
+      </div>
+      <div class="card__subtitle">
+        <p>Please let us know how we did with your support request. All feedback is appreciated
+          to help us improve our offering!</p>
+      </div>
+      <div class="card__rating">
+        <form action="/">
+          <div class="card__rating__buttons">
+            <input class="card__rating__buttons__input" type="radio" name="rating" id="myRadio1" value="1stars">
+            <label class="card__rating__buttons__label" for="myRadio1">1</label>
+            <input class="card__rating__buttons__input" type="radio" name="rating" id="myRadio2" value="2stars">
+            <label class="card__rating__buttons__label" for="myRadio2">2</label>
+            <input class="card__rating__buttons__input" type="radio" name="rating" id="myRadio3" value="3stars">
+            <label class="card__rating__buttons__label" for="myRadio3">3</label>
+            <input class="card__rating__buttons__input" type="radio" name="rating" id="myRadio4" value="4stars">
+            <label class="card__rating__buttons__label" for="myRadio4">4</label>
+            <input class="card__rating__buttons__input" type="radio" name="rating" id="myRadio5" value="5stars">
+            <label class="card__rating__buttons__label" for="myRadio5">5</label>
+          </div>
+          <button>SUBMIT</button>
+        </form>
       </div>
     </div>
-    <div class="card__title">
-      <h2>How did we do?</h2>
-    </div>
-    <div class="card__subtitle">
-      <p>Please let us know how we did with your support request. All feedback is appreciated
-        to help us improve our offering!</p>
-    </div>
-    <div class="card__rating">
-      <form action="/">
-        <div class="card__rating__buttons">
+    <!-- Rating state end -->
 
-          <input class="card__rating__buttons__input" type="radio" name="rating" id="myRadio1" value="1stars">
-          <label class="card__rating__buttons__label" for="myRadio1">1</label>
-
-          <input class="card__rating__buttons__input" type="radio" name="rating" id="myRadio2" value="2stars">
-          <label class="card__rating__buttons__label" for="myRadio2">2</label>
-
-          <input class="card__rating__buttons__input" type="radio" name="rating" id="myRadio3" value="3stars">
-          <label class="card__rating__buttons__label" for="myRadio3">3</label>
-
-          <input class="card__rating__buttons__input" type="radio" name="rating" id="myRadio4" value="4stars">
-          <label class="card__rating__buttons__label" for="myRadio4">4</label>
-
-          <input class="card__rating__buttons__input" type="radio" name="rating" id="myRadio5" value="5stars">
-          <label class="card__rating__buttons__label" for="myRadio5">5</label>
-
+    <div class="card__after hidden">
+      <div class="card__after__header">
+        <div class="card__after__header__image">
+          <img src="./images/illustration-thank-you.svg" alt="logo">
         </div>
-        <button>SUBMIT</button>
-      </form>
+        <div class="card__after__header__rate">
+          <p id="rateText">You selected out 4 of 5</p>
+        </div>
+      </div>
+      <div class="card__after__summary">
+        <h2>Thank You!</h2>
+        <p>We appreciate you taking the time to give a rating. If you ever need more support, 
+          don’t hesitate to get in touch!</p>
+      </div>
     </div>
+    <!-- Thank you state start -->
+
   </div>
+  <script src="./dist/app.js"></script>
 
 
-  <!-- Rating state end -->
 
-  <!-- Thank you state start -->
 
   <!-- You selected Add rating here out of 5 -->
 

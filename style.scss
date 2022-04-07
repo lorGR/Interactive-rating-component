@@ -107,6 +107,54 @@ body{
             }
         }
     }
+    .hidden{
+        display: none;
+    }
+    .card__after{
+        &__header{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1em 0 0 0;
+            &__image{
+                img{
+                    width: 150px;
+                }
+            }
+            &__rate{
+                color: var(--primary--color);
+                background: var(--circle--color);
+                border-radius: 50px;
+                margin: 1.25em;
+                p{
+                    font-size: var(--subtext--size);
+                    margin: 0;
+                    padding: .5em;
+                }
+            }
+        }
+        &__summary{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h2{
+                margin: 0;
+                color: white;
+            }
+            p{
+                line-height: 1.5;
+                font-size: var(--subtext--size);
+                text-align: center;
+                color: var(--subtext--color);
+            }
+        }
+    }
+}
+
+@media(min-width:1440px){
+    .card{
+        max-width: 330px;
+    }
 }
 
 
