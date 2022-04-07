@@ -142,7 +142,7 @@ body .card__after__summary p {
   color: var(--subtext--color);
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 480px) {
   .card {
     max-width: 330px;
   }
